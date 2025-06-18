@@ -106,9 +106,24 @@ README.md
 
 ---
 
-## 📌 Notes
+## 📌 Additional Notes & Improvements
 
-- The model is not a financial product and is designed for academic and strategic testing purposes.
-- It performs best under stable market conditions and should not be used during high-stress events without additional filters (e.g., weather, REMIT).
+- ⚙️ **Automated Deployment**:  
+  This model can be integrated into an automated pipeline for real-time monitoring of **prompt trades on a half-hourly basis**, directly using data streams from **FIS Aligne**.
+
+- 📅 **Wider Historical Validation**:  
+  Further analysis can be extended to a **5+ year historical window** of trade data and gas peaker cost forecasts. This would allow a **robust quantification of seasonal effects** and help validate the strength of the correlation year-over-year.
+
+- 🧠 **Scalability to Live Trading**:  
+  An automated implementation could be developed and deployed directly on the **Day-Ahead trading desk** as a decision support tool for short-term directional strategies.
+
+- 📉 **Scope of This Paper**:  
+  This analysis provides a **lightweight, first-level exploration** of the potential for strategy deployment. It suggests that a correlation exists and that this correlation can be **used to inform trades**, but:
+  - It is **not a final implementation**
+  - More parameters and exogenous variables should be considered at a higher operational level
+
+- 🌦️ **Future Enhancements**:
+  - Incorporate **weather patterns**, **REMIT events**, and **localized gas/power consumption** in Great Britain to improve model precision
+  - Explore performance in **other markets** where the **power-to-gas price ratio is ~4x** and where infrastructure and market structure are comparable to the UK
 
 ---
