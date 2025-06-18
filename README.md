@@ -127,3 +127,93 @@ README.md
   - Explore performance in **other markets** where the **power-to-gas price ratio is ~4x** and where infrastructure and market structure are comparable to the UK
 
 ---
+
+
+## 🔭 Opening the Path Forward
+
+This research provides a foundational framework to demonstrate that **a statistically meaningful and economically actionable correlation exists** between DA prices and gas peaker costs in GB electricity markets. However, this is just the beginning. The simplicity of the model is intentional — it creates a baseline structure that is understandable, replicable, and extendable. To further improve accuracy, adaptiveness, and applicability, several technical enhancements are possible:
+
+---
+
+### 📈 1. Expand the Historical Scope
+
+- Integrate **5+ years of trading and peaker cost data**.
+- Conduct correlation and profitability analysis **segmented by season** and **market regime**.
+- Quantify how model accuracy changes across different years, fuel price cycles, and policy conditions.
+
+---
+
+### ⚙️ 2. Build a Real-Time Trading Pipeline
+
+- Automate trade signal generation using **live prompt trades** on a **half-hourly basis**.
+- Direct integration with **FIS Aligne** for both DA forecasts and internal peaker cost streams.
+- Enable **real-time deployment** of the model on the Day-Ahead desk as a decision support tool.
+
+---
+
+### 🌦️ 3. Enrich with Weather & Demand Drivers
+
+- Include **forecasted weather variables** (e.g., wind, temperature, solar irradiance).
+- Add **localized gas and electricity consumption forecasts** for the GB grid.
+- Use weather-adjusted demand expectations to filter false positives from price spread signals.
+
+---
+
+### 🧠 4. Improve the Cost Modeling Layer
+
+- Implement a **dynamic gas peaker stack**, adjusting for real-time asset availability, thermal efficiency, and ambient conditions.
+- Distinguish between peaker asset types (OCGT vs CCGT) to assign more precise marginal strike levels.
+
+---
+
+### ⚡ 5. Consider Market Locational Granularity
+
+- Account for **zonal constraints** (e.g., north-south congestion in GB).
+- Integrate **Transmission Constraint Balancing Services (TCBS)** and locational price separation data.
+- Adapt the model to markets that exhibit **nodal or zonal pricing mechanisms**.
+
+---
+
+### 📊 6. Expand to Other Markets
+
+- Test the model in **non-GB countries** with:
+  - A **power-to-gas price ratio of ~4x**,
+  - Clear marginal fuel-driven pricing logic,
+  - Similar infrastructure maturity.
+- Possible regions include parts of the **Nordics**, **Texas (ERCOT)**, or **continental Europe** under crisis pricing regimes.
+
+---
+
+### 📉 7. Model Probabilistic Confidence
+
+- Quantify confidence levels for each signal (e.g., “75% chance DA > GPC yields profitable WD short”).
+- Use bootstrapping or Bayesian methods to model **uncertainty**.
+- Helps inform trader risk tolerance and strategy selection.
+
+---
+
+### 🧠 8. Build Explainable AI Layers
+
+- Auto-generate **explanations** for each trade signal:
+  > “DA price £93/MWh > GPC £85/MWh → Forecasted low wind → Expected WD reversion → Short Triggered”
+
+- Improves **transparency** for traders, risk teams, and desk managers.
+
+---
+
+### 🔄 9. Integrate Cross-Market Signals
+
+- Explore co-optimization opportunities:
+  - Gas → Power → EUA (carbon)
+  - Battery peaker vs gas peaker marginality
+  - UK Power vs TTF gas cross-commodity pricing logic
+
+- Enables the construction of a **multi-dimensional directional trading strategy**.
+
+---
+
+### 🧪 Final Note
+
+This paper does not aim to be a final trading model. It is a **conceptual and data-driven demonstration** that this correlation exists and **can be exploited** as part of a structured trading framework. The real value lies in building upon this with more data, richer features, and intelligent integration into real-time workflows.
+
+---
